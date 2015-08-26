@@ -1,0 +1,20 @@
+.mainbody{
+	border-radius: 5px;
+	border-style: solid;
+	color: #ffff99;
+	background-color: #424b4b;
+}
+
+.inputfont{
+	font-size: 28px;
+	color: grey;
+}
+
+.btnsty{
+	float: right;
+	color: black;
+}
+
+ul{
+	list-style-type: none;
+}

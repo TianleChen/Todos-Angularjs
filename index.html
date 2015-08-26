@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+		<script src="todo.js"></script>
+	</head>
+	<body ng-app="todo" ng-controller="myCtrl">
+		<div class="container mainbody col-md-6">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Todos-AngularJs</h1><hr>
+					<input class="inputfont" type="text" placeholder="Type a todo and Hit Enter" ng-keypress="add($event)" id="addtodo"><hr>
+					{{ numrem }} remaining
+					<button class="btnsty" ng-click="clear(mark)">Clear Completed Todos</button><hr>
+					<input type="checkbox" ng-model="markall" ng-click="Markall()"> Mark All Done
+					<ul>
+						<li ng-repeat="todo in todolist">
+							<input type="checkbox" ng-model="todo.click">{{todo.name}}
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
